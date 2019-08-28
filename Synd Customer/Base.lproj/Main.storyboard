@@ -259,6 +259,7 @@ Lodge a complaint</string>
                             <constraint firstItem="Bod-en-1bf" firstAttribute="top" secondItem="BNi-LG-9sD" secondAttribute="top" constant="23" id="OVT-8G-HOK"/>
                             <constraint firstItem="Fhq-VX-ADg" firstAttribute="leading" secondItem="BNi-LG-9sD" secondAttribute="leading" constant="18" id="PZo-BL-wsb"/>
                             <constraint firstAttribute="trailing" secondItem="Fhq-VX-ADg" secondAttribute="trailing" constant="18" id="Rt4-jm-wmE"/>
+                            <constraint firstItem="BNi-LG-9sD" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Bod-en-1bf" secondAttribute="trailing" symbolic="YES" id="kl4-sA-bWi"/>
                             <constraint firstItem="zPw-bF-2LW" firstAttribute="centerY" secondItem="orK-v5-jhT" secondAttribute="centerY" id="uYd-dY-5mv"/>
                             <constraint firstItem="Bod-en-1bf" firstAttribute="leading" secondItem="BNi-LG-9sD" secondAttribute="leading" constant="18" id="z53-NQ-RCE"/>
                         </constraints>
@@ -345,6 +346,7 @@ Lodge a complaint</string>
                             <constraint firstItem="9U5-1m-vLA" firstAttribute="top" secondItem="Thz-SU-TO2" secondAttribute="top" constant="23" id="2cP-PQ-ylP"/>
                             <constraint firstAttribute="trailing" secondItem="Ftn-wA-c7Z" secondAttribute="trailing" constant="16" id="BRo-00-GWT"/>
                             <constraint firstItem="9U5-1m-vLA" firstAttribute="leading" secondItem="Thz-SU-TO2" secondAttribute="leading" constant="18" id="Eeq-K9-lox"/>
+                            <constraint firstItem="Thz-SU-TO2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9U5-1m-vLA" secondAttribute="trailing" symbolic="YES" id="GAk-3U-V73"/>
                             <constraint firstItem="Thz-SU-TO2" firstAttribute="bottom" secondItem="Ftn-wA-c7Z" secondAttribute="bottom" constant="10" id="GRA-Ia-sAO"/>
                             <constraint firstAttribute="trailing" secondItem="a2H-R5-esy" secondAttribute="trailing" constant="16" id="LqU-Ru-Dfk"/>
                             <constraint firstItem="NgM-MY-RZj" firstAttribute="leading" secondItem="Thz-SU-TO2" secondAttribute="leading" constant="18" id="Nq8-ti-PlJ"/>
