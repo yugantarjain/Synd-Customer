@@ -24,6 +24,9 @@
                                 <state key="normal" title="Enable automatic check-in">
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="EnableAutomaticCheckIn:" destination="9pv-A4-QxB" eventType="touchUpInside" id="L7H-oF-DaW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, John!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3t-fp-gLh">
                                 <rect key="frame" x="18" y="111" width="220" height="39"/>

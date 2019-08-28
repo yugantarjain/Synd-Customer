@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import CoreLocation
 
 class FirstViewController: UIViewController {
-
+    
+    //IB
+    @IBAction func EnableAutomaticCheckIn(_ sender: UIButton) {
+        enableLocationServices()
+    }
+    //view
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    //Methods
+    func enableLocationServices() {
+        let locationManager = CLLocationManager.init()
+        locationManager.requestWhenInUseAuthorization()
+    }
 
 }
 
