@@ -66,12 +66,15 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - Socket.IO-Client-Swift (15.1.0):
+    - Starscream (~> 3.1)
   - Starscream (3.1.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - FirebaseUI/Google
   - GoogleSignIn
+  - Socket.IO-Client-Swift (~> 15.1.0)
   - Starscream
 
 SPEC REPOS:
@@ -90,6 +93,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - nanopb
+    - Socket.IO-Client-Swift
     - Starscream
 
 SPEC CHECKSUMS:
@@ -107,8 +111,9 @@ SPEC CHECKSUMS:
   GoogleUtilities: e7dc37039b19df7fe543479d3e4a02ac8d11bb69
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  Socket.IO-Client-Swift: 7cb44c0ffb86e158cee32d0642d30ec5fdcf8f61
   Starscream: 08172b481e145289c4930cb567230fb55897cfa4
 
-PODFILE CHECKSUM: 5dc5b2c732ef4f1de78512912f1524e91910ac47
+PODFILE CHECKSUM: 0c8cc8c93c46d84081a646159d18905a9a793822
 
 COCOAPODS: 1.5.3

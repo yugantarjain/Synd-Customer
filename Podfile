@@ -11,5 +11,6 @@ target 'Synd Customer' do
 	pod 'Starscream'
 	pod 'GoogleSignIn'
     pod 'FirebaseUI/Google'
+    pod 'Socket.IO-Client-Swift', '~> 15.1.0'
 
 end
