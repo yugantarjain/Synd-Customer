@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YRZ-i5-Ra7">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -49,7 +50,7 @@ In case of any issue, check in physically through the counter instead.</string>
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="7Fo-tv-Rnw" kind="show" id="7Fu-bw-1iw"/>
+                                            <segue destination="7Fo-tv-Rnw" kind="show" identifier="toQRScan" id="7Fu-bw-1iw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lV0-T8-LVm">
@@ -126,6 +127,24 @@ In case of any issue, check in physically through the counter instead.</string>
             </objects>
             <point key="canvasLocation" x="1659.4202898550725" y="359.59821428571428"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="dbE-xF-XVD">
+            <objects>
+                <viewController id="Ene-N9-LjR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kx0-I3-Uly">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7qp-Pj-Sq1"/>
+                    </view>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="toMain" id="4Wa-WW-3nM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMQ-GH-HOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-791" y="0.0"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -147,7 +166,7 @@ In case of any issue, check in physically through the counter instead.</string>
         <!--QR Scan-->
         <scene sceneID="egb-Tn-O3N">
             <objects>
-                <viewController id="7Fo-tv-Rnw" customClass="CameraViewController" customModule="AutoCure" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7Fo-tv-Rnw" customClass="CameraViewController" customModule="Synd_Customer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zhM-N1-66k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,8 +189,8 @@ In case of any issue, check in physically through the counter instead.</string>
                     <navigationItem key="navigationItem" title="QR Scan" id="ros-Zu-5Ut"/>
                     <connections>
                         <outlet property="scanlabel" destination="yQ1-Hp-lut" id="l2O-DV-qKi"/>
-                        <segue destination="Q0g-V4-9iY" kind="show" id="kRN-Nf-lTf"/>
-                        <segue destination="YRZ-i5-Ra7" kind="show" id="4TC-wQ-Frx"/>
+                        <segue destination="Q0g-V4-9iY" kind="show" identifier="toHNI" id="kRN-Nf-lTf"/>
+                        <segue destination="YRZ-i5-Ra7" kind="show" identifier="toQueue" id="4TC-wQ-Frx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOk-ea-tTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -274,7 +293,7 @@ Lodge a complaint</string>
         <!--Waiting-->
         <scene sceneID="1OF-5c-yZz">
             <objects>
-                <viewController id="YRZ-i5-Ra7" sceneMemberID="viewController">
+                <viewController id="YRZ-i5-Ra7" customClass="CustomerQueueViewController" customModule="Synd_Customer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ml4-kt-1vP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -293,17 +312,17 @@ Lodge a complaint</string>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="a2H-R5-esy">
                                 <rect key="frame" x="16" y="343.5" width="382" height="209.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gCo-vF-NRp">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gCo-vF-NRp">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="84"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLG-Ra-zpY">
-                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="84"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="84"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                 <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently, there are 6 people ahead of you in the queue" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wT0-88-s9a">
-                                                <rect key="frame" x="46.5" y="0.0" width="335.5" height="84"/>
+                                                <rect key="frame" x="191" y="0.0" width="191" height="84"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>

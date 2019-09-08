@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera access required to scan QR code and check in</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location required to enable automatic check-in feature</string>
 	<key>CFBundleDevelopmentRegion</key>

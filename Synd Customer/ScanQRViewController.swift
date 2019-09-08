@@ -70,6 +70,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             return
         }
         self.scanlabel.text = "Syndicate bank ****** QR code detected. \nYou are being checked in automatically"
+        self.performSegue(withIdentifier: "toQueue", sender: self)
         //        captureSession.stopRunning()
     }
 }
