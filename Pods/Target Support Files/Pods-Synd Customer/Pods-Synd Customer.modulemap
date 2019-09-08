@@ -1,0 +1,6 @@
+framework module Pods_Synd_Customer {
+  umbrella header "Pods-Synd Customer-umbrella.h"
+
+  export *
+  module * { export * }
+}
