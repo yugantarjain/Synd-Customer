@@ -90,42 +90,34 @@ In case of any issue, check in physically through the counter instead.</string>
             </objects>
             <point key="canvasLocation" x="1659.4202898550725" y="-320.08928571428572"/>
         </scene>
-        <!--Second View Controller-->
-        <scene sceneID="wg7-f3-ORb">
+        <!--Table View Controller-->
+        <scene sceneID="sh1-aV-q5U">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Synd_Customer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                <tableViewController id="WCm-ap-JMR" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N69-yU-hMe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="106.5" y="426.5" width="201.5" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appointment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="165.5" y="477.5" width="83.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="KMU-3h-ESt"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8TG-f7-P2x">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8TG-f7-P2x" id="P3l-dI-hBr">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WCm-ap-JMR" id="9Dz-bg-ipK"/>
+                            <outlet property="delegate" destination="WCm-ap-JMR" id="9Km-M9-Iu5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="0Z5-ff-toJ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ELi-TM-b3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1659.4202898550725" y="359.59821428571428"/>
+            <point key="canvasLocation" x="1659" y="368"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="dbE-xF-XVD">
@@ -242,7 +234,7 @@ In case of any issue, check in physically through the counter instead.</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="Yks-Qi-tki"/>
+                        <segue destination="WCm-ap-JMR" kind="relationship" relationship="rootViewController" id="peI-VS-mJq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUX-eu-HAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -324,7 +316,7 @@ Lodge a complaint</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="a2H-R5-esy">
-                                <rect key="frame" x="16" y="343.5" width="382" height="209.5"/>
+                                <rect key="frame" x="16" y="307" width="382" height="282.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gCo-vF-NRp">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="84"/>
@@ -354,39 +346,39 @@ Lodge a complaint</string>
                                         <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ftn-wA-c7Z">
-                                <rect key="frame" x="16" y="704.5" width="382" height="98.5"/>
-                                <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygZ-Fc-CAi">
-                                        <rect key="frame" x="152.5" y="0.0" width="77" height="30"/>
-                                        <state key="normal" title="Emergency">
-                                            <color key="titleColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                                        <rect key="frame" x="0.0" y="241.5" width="382" height="41"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Refresh">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="refersh:" destination="YRZ-i5-Ra7" eventType="touchUpInside" id="Yl4-no-bth"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getting live updates through the app requires an active internert connection" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beI-Rr-VJq">
-                                        <rect key="frame" x="13.5" y="60" width="355" height="38.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getting live updates through the app requires an active internert connection" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beI-Rr-VJq">
+                                <rect key="frame" x="16" y="764.5" width="382" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9U5-1m-vLA" firstAttribute="top" secondItem="Thz-SU-TO2" secondAttribute="top" constant="23" id="2cP-PQ-ylP"/>
-                            <constraint firstAttribute="trailing" secondItem="Ftn-wA-c7Z" secondAttribute="trailing" constant="16" id="BRo-00-GWT"/>
+                            <constraint firstItem="beI-Rr-VJq" firstAttribute="leading" secondItem="Thz-SU-TO2" secondAttribute="leading" constant="16" id="Cbo-CC-ra3"/>
                             <constraint firstItem="9U5-1m-vLA" firstAttribute="leading" secondItem="Thz-SU-TO2" secondAttribute="leading" constant="18" id="Eeq-K9-lox"/>
                             <constraint firstItem="Thz-SU-TO2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9U5-1m-vLA" secondAttribute="trailing" symbolic="YES" id="GAk-3U-V73"/>
-                            <constraint firstItem="Thz-SU-TO2" firstAttribute="bottom" secondItem="Ftn-wA-c7Z" secondAttribute="bottom" constant="10" id="GRA-Ia-sAO"/>
                             <constraint firstAttribute="trailing" secondItem="a2H-R5-esy" secondAttribute="trailing" constant="16" id="LqU-Ru-Dfk"/>
                             <constraint firstItem="NgM-MY-RZj" firstAttribute="leading" secondItem="Thz-SU-TO2" secondAttribute="leading" constant="18" id="Nq8-ti-PlJ"/>
-                            <constraint firstItem="Ftn-wA-c7Z" firstAttribute="leading" secondItem="ml4-kt-1vP" secondAttribute="leading" constant="16" id="QfG-aR-HOB"/>
+                            <constraint firstItem="Thz-SU-TO2" firstAttribute="trailing" secondItem="beI-Rr-VJq" secondAttribute="trailing" constant="16" id="gXy-zZ-piv"/>
                             <constraint firstItem="NgM-MY-RZj" firstAttribute="top" secondItem="9U5-1m-vLA" secondAttribute="bottom" constant="8" id="haj-gl-26V"/>
                             <constraint firstItem="a2H-R5-esy" firstAttribute="leading" secondItem="Thz-SU-TO2" secondAttribute="leading" constant="16" id="jjS-z9-Tab"/>
                             <constraint firstItem="NgM-MY-RZj" firstAttribute="trailing" secondItem="Thz-SU-TO2" secondAttribute="trailing" constant="-18" id="n18-0b-vrV"/>
+                            <constraint firstItem="Thz-SU-TO2" firstAttribute="bottom" secondItem="beI-Rr-VJq" secondAttribute="bottom" constant="10" id="yN7-SS-zml"/>
                             <constraint firstItem="a2H-R5-esy" firstAttribute="centerY" secondItem="ml4-kt-1vP" secondAttribute="centerY" id="zPW-1E-o05"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Thz-SU-TO2"/>
@@ -397,6 +389,7 @@ Lodge a complaint</string>
                         <outlet property="queueNumber" destination="eLG-Ra-zpY" id="gYw-tk-ZzY"/>
                         <outlet property="queueNumberMessage" destination="wT0-88-s9a" id="0Up-tn-YLn"/>
                         <outlet property="timeMessage" destination="EqY-kG-ScT" id="Bao-4N-ES3"/>
+                        <outlet property="welcomeLabel" destination="9U5-1m-vLA" id="wsa-vY-hOm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZT-sO-j9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
