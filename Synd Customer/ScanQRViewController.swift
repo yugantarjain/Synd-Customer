@@ -78,6 +78,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             return
         }
         self.scanlabel.text = "Syndicate bank ****** QR code detected. \nYou are being checked in automatically"
+        captureSession.stopRunning()
         addUserToQueue()
     }
     
@@ -85,7 +86,9 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         let urlString = "https://hack321.herokuapp.com/add"
         let url = URL(string: urlString)
         var request = URLRequest.init(url: url!)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
+        
         let email = Auth.auth().currentUser?.email
         let user = User.init(email: email)
         guard let uploadData = try? JSONEncoder().encode(user) else { return }

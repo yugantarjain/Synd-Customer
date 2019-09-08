@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import FirebaseAuth
 
 class FirstViewController: UIViewController {
     
@@ -15,10 +16,12 @@ class FirstViewController: UIViewController {
     @IBAction func EnableAutomaticCheckIn(_ sender: UIButton) {
         enableLocationServices()
     }
+    @IBOutlet weak var helloLable: UILabel!
     //view
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        helloLable.text = "Welcome, \(Auth.auth().currentUser?.displayName ?? "")"
     }
     //Methods
     func enableLocationServices() {

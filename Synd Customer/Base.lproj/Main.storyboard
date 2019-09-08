@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YRZ-i5-Ra7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ene-N9-LjR">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -85,39 +85,56 @@ In case of any issue, check in physically through the counter instead.</string>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <navigationItem key="navigationItem" id="nu3-6B-OfL"/>
+                    <connections>
+                        <outlet property="helloLable" destination="a3t-fp-gLh" id="Fgn-RW-MCr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1659.4202898550725" y="-320.08928571428572"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="sh1-aV-q5U">
+        <!--Staff View Controller-->
+        <scene sceneID="Yf6-eU-aZv">
             <objects>
-                <tableViewController id="WCm-ap-JMR" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N69-yU-hMe">
+                <viewController id="E5Q-LS-Oav" customClass="staffViewController" customModule="Synd_Customer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nlF-NC-nXs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="XhH-pD-0xe">
+                                <rect key="frame" x="93" y="392" width="228" height="112"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5S-Zs-4vN">
+                                        <rect key="frame" x="0.0" y="0.0" width="228" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Next normal customer"/>
+                                        <connections>
+                                            <action selector="next:" destination="E5Q-LS-Oav" eventType="touchUpInside" id="duI-28-6Ti"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9R-Bf-DYy">
+                                        <rect key="frame" x="0.0" y="71" width="228" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Next HNI"/>
+                                        <connections>
+                                            <action selector="nexthni:" destination="E5Q-LS-Oav" eventType="touchUpInside" id="Vhb-XB-3Kl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8TG-f7-P2x">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8TG-f7-P2x" id="P3l-dI-hBr">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="WCm-ap-JMR" id="9Dz-bg-ipK"/>
-                            <outlet property="delegate" destination="WCm-ap-JMR" id="9Km-M9-Iu5"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="0Z5-ff-toJ"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ELi-TM-b3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="XhH-pD-0xe" firstAttribute="centerY" secondItem="nlF-NC-nXs" secondAttribute="centerY" id="576-HY-bcz"/>
+                            <constraint firstItem="XhH-pD-0xe" firstAttribute="centerX" secondItem="nlF-NC-nXs" secondAttribute="centerX" id="eP4-6t-BlJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B6Q-Pu-y63"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yyd-Kz-23v"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s1v-3R-JFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1659" y="368"/>
+            <point key="canvasLocation" x="1659" y="360"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="dbE-xF-XVD">
@@ -234,7 +251,7 @@ In case of any issue, check in physically through the counter instead.</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="WCm-ap-JMR" kind="relationship" relationship="rootViewController" id="peI-VS-mJq"/>
+                        <segue destination="E5Q-LS-Oav" kind="relationship" relationship="rootViewController" id="1gX-Hz-YcN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUX-eu-HAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
