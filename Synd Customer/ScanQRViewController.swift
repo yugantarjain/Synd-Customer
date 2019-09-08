@@ -1,5 +1,10 @@
 import UIKit
 import AVFoundation
+import FirebaseAuth
+
+struct User: Encodable {
+    let email: String?
+}
 
 class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
@@ -69,7 +74,38 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         guard let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject else {
             return
         }
+        guard metadataObject.stringValue == "395621" else {
+            return
+        }
         self.scanlabel.text = "Syndicate bank ****** QR code detected. \nYou are being checked in automatically"
-        self.performSegue(withIdentifier: "toQueue", sender: self)
+        addUserToQueue()
+    }
+    
+    func addUserToQueue() {
+        let urlString = "https://hack321.herokuapp.com/add"
+        let url = URL(string: urlString)
+        var request = URLRequest.init(url: url!)
+        request.httpMethod = "POST"
+        let email = Auth.auth().currentUser?.email
+        let user = User.init(email: email)
+        guard let uploadData = try? JSONEncoder().encode(user) else { return }
+        URLSession.shared.uploadTask(with: request, from: uploadData) { (data, response, error) in
+            guard error == nil else { return }
+            guard let response = response as? HTTPURLResponse,
+                (200...299).contains(response.statusCode) else {
+                    print ("server error")
+                    return
+            }
+            //api success
+            DispatchQueue.main.async {
+                if (email?.hasPrefix("high"))! {
+                    self.performSegue(withIdentifier: "toHNI", sender: self)
+                }
+                else {
+                    self.performSegue(withIdentifier: "toQueue", sender: self)
+                }
+            }
+            return
+        }.resume()
     }
 }

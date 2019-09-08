@@ -7,13 +7,45 @@
 //
 
 import UIKit
+import Starscream
 
-class CustomerQueueViewController: UIViewController {
+class CustomerQueueViewController: UIViewController, WebSocketDelegate {
+    
+    func websocketDidConnect(socket: WebSocketClient) {
+        print("connect")
+        return
+    }
+    
+    func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+        print("disconnect")
+        return
+    }
+    
+    func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+        print("string")
+        return
+    }
+    
+    func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
+        print("data")
+        return
+    }
+    
+    var socket: WebSocket!
+    
+    @IBOutlet weak var queueNumber: UILabel!
+    @IBOutlet weak var queueNumberMessage: UILabel!
+    @IBOutlet weak var timeMessage: UILabel!
+    @IBOutlet weak var counterMessage: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        socket = WebSocket.init(url: URL(string: "https://hack321.herokuapp.com")!)
+        socket.delegate = self
+        socket.connect()
+        
     }
     
 

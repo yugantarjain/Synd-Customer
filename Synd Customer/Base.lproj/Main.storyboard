@@ -392,6 +392,12 @@ Lodge a complaint</string>
                         <viewLayoutGuide key="safeArea" id="Thz-SU-TO2"/>
                     </view>
                     <navigationItem key="navigationItem" title="Waiting" id="r0f-j7-nch"/>
+                    <connections>
+                        <outlet property="counterMessage" destination="T1I-hr-paT" id="wGa-pF-elC"/>
+                        <outlet property="queueNumber" destination="eLG-Ra-zpY" id="gYw-tk-ZzY"/>
+                        <outlet property="queueNumberMessage" destination="wT0-88-s9a" id="0Up-tn-YLn"/>
+                        <outlet property="timeMessage" destination="EqY-kG-ScT" id="Bao-4N-ES3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZT-sO-j9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
