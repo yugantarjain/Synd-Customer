@@ -91,12 +91,12 @@
 				53B8F694231656A200305C29 /* ScanQRViewController.swift */,
 				531DE0F62325179B003FE290 /* CustomerQueueViewController.swift */,
 				534BD03F232633ED006CAFE1 /* HNIViewController.swift */,
+				5324F26823257E31009AE66C /* staffViewController.swift */,
 				53B8F686231653ED00305C29 /* Main.storyboard */,
 				53B8F689231653EE00305C29 /* Assets.xcassets */,
 				53B8F68B231653EE00305C29 /* LaunchScreen.storyboard */,
 				53B8F68E231653EE00305C29 /* Info.plist */,
 				53F2AB15231E26E8003E4456 /* GoogleService-Info.plist */,
-				5324F26823257E31009AE66C /* staffViewController.swift */,
 			);
 			path = "Synd Customer";
 			sourceTree = "<group>";

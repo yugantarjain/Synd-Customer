@@ -102,9 +102,8 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             //api success
             DispatchQueue.main.async {
                 if (email?.hasPrefix("syd"))! {
-                    hniLabelText = "HNI CUSTOMER PRESENT!\n"
+                    hniLabelText = "HNI CUSTOMER PRESENT:\n\n"
                     hniLabelText += (Auth.auth().currentUser?.displayName)! + "\n"
-                    hniLabelText += (Auth.auth().currentUser?.phoneNumber)! + "\n"
                     hniLabelText += (Auth.auth().currentUser?.email)!
                     self.performSegue(withIdentifier: "toHNI", sender: self)
                 }

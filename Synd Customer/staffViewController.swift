@@ -8,7 +8,7 @@
 
 import UIKit
 
-var hniLabelText = "No HNI customer present right now."
+var hniLabelText = "No HNI customer present right now"
 
 class staffViewController: UIViewController {
 

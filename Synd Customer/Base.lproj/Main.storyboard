@@ -102,18 +102,21 @@ In case of any issue, check in physically through the counter instead.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="XhH-pD-0xe">
-                                <rect key="frame" x="50" y="347.5" width="314" height="201"/>
+                                <rect key="frame" x="30" y="345.5" width="354" height="205"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5S-Zs-4vN">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Next normal customer"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="45"/>
+                                        <color key="backgroundColor" red="0.0" green="0.72125044019999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <state key="normal" title="Next normal customer">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="next:" destination="E5Q-LS-Oav" eventType="touchUpInside" id="duI-28-6Ti"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No HNI customer present right now." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwS-Xz-cdU">
-                                        <rect key="frame" x="0.0" y="141" width="314" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No HNI customer present right now" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwS-Xz-cdU">
+                                        <rect key="frame" x="0.0" y="145" width="354" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -124,8 +127,8 @@ In case of any issue, check in physically through the counter instead.</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XhH-pD-0xe" firstAttribute="centerY" secondItem="nlF-NC-nXs" secondAttribute="centerY" id="576-HY-bcz"/>
-                            <constraint firstItem="XhH-pD-0xe" firstAttribute="leading" secondItem="B6Q-Pu-y63" secondAttribute="leading" constant="50" id="Pzd-aV-DuH"/>
-                            <constraint firstItem="B6Q-Pu-y63" firstAttribute="trailing" secondItem="XhH-pD-0xe" secondAttribute="trailing" constant="50" id="ciM-t6-dmU"/>
+                            <constraint firstItem="XhH-pD-0xe" firstAttribute="leading" secondItem="B6Q-Pu-y63" secondAttribute="leading" constant="30" id="Pzd-aV-DuH"/>
+                            <constraint firstItem="B6Q-Pu-y63" firstAttribute="trailing" secondItem="XhH-pD-0xe" secondAttribute="trailing" constant="30" id="ciM-t6-dmU"/>
                             <constraint firstItem="XhH-pD-0xe" firstAttribute="centerX" secondItem="nlF-NC-nXs" secondAttribute="centerX" id="eP4-6t-BlJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B6Q-Pu-y63"/>
