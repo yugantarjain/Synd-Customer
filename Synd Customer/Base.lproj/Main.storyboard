@@ -93,7 +93,7 @@ In case of any issue, check in physically through the counter instead.</string>
             </objects>
             <point key="canvasLocation" x="1659.4202898550725" y="-320.08928571428572"/>
         </scene>
-        <!--Staff View Controller-->
+        <!--For Staff Use-->
         <scene sceneID="Yf6-eU-aZv">
             <objects>
                 <viewController id="E5Q-LS-Oav" customClass="staffViewController" customModule="Synd_Customer" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,7 +130,7 @@ In case of any issue, check in physically through the counter instead.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B6Q-Pu-y63"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Yyd-Kz-23v"/>
+                    <navigationItem key="navigationItem" title="For Staff Use" id="Yyd-Kz-23v"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1v-3R-JFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -245,8 +245,8 @@ In case of any issue, check in physically through the counter instead.</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K8x-zW-qrD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dme-UK-JPC">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="dme-UK-JPC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -261,7 +261,7 @@ In case of any issue, check in physically through the counter instead.</string>
         <!--Waiting-->
         <scene sceneID="gyA-Hf-SKn">
             <objects>
-                <viewController id="Q0g-V4-9iY" sceneMemberID="viewController">
+                <viewController id="Q0g-V4-9iY" customClass="HNIViewController" customModule="Synd_Customer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="orK-v5-jhT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

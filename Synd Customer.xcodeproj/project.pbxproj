@@ -11,6 +11,7 @@
 		531DE0F72325179B003FE290 /* CustomerQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531DE0F62325179B003FE290 /* CustomerQueueViewController.swift */; };
 		531DE0F9232537D1003FE290 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531DE0F8232537D1003FE290 /* LoginViewController.swift */; };
 		5324F26923257E31009AE66C /* staffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324F26823257E31009AE66C /* staffViewController.swift */; };
+		534BD040232633ED006CAFE1 /* HNIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534BD03F232633ED006CAFE1 /* HNIViewController.swift */; };
 		53B8F681231653ED00305C29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B8F680231653ED00305C29 /* AppDelegate.swift */; };
 		53B8F683231653ED00305C29 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B8F682231653ED00305C29 /* FirstViewController.swift */; };
 		53B8F685231653ED00305C29 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B8F684231653ED00305C29 /* SecondViewController.swift */; };
@@ -25,6 +26,7 @@
 		531DE0F62325179B003FE290 /* CustomerQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerQueueViewController.swift; sourceTree = "<group>"; };
 		531DE0F8232537D1003FE290 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5324F26823257E31009AE66C /* staffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staffViewController.swift; sourceTree = "<group>"; };
+		534BD03F232633ED006CAFE1 /* HNIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNIViewController.swift; sourceTree = "<group>"; };
 		53B8F67D231653ED00305C29 /* Synd Customer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Synd Customer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53B8F680231653ED00305C29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53B8F682231653ED00305C29 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				53B8F684231653ED00305C29 /* SecondViewController.swift */,
 				53B8F694231656A200305C29 /* ScanQRViewController.swift */,
 				531DE0F62325179B003FE290 /* CustomerQueueViewController.swift */,
+				534BD03F232633ED006CAFE1 /* HNIViewController.swift */,
 				53B8F686231653ED00305C29 /* Main.storyboard */,
 				53B8F689231653EE00305C29 /* Assets.xcassets */,
 				53B8F68B231653EE00305C29 /* LaunchScreen.storyboard */,
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				534BD040232633ED006CAFE1 /* HNIViewController.swift in Sources */,
 				531DE0F9232537D1003FE290 /* LoginViewController.swift in Sources */,
 				53B8F695231656A200305C29 /* ScanQRViewController.swift in Sources */,
 				531DE0F72325179B003FE290 /* CustomerQueueViewController.swift in Sources */,

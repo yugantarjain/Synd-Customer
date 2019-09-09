@@ -41,7 +41,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     override func viewWillAppear(_ animated: Bool) {
         //navigationController?.isNavigationBarHidden = true
-        captureSession.startRunning()
+//        captureSession.startRunning()
     }
     
     func setupCaptureSession()

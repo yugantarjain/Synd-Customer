@@ -22,7 +22,7 @@ class staffViewController: UIViewController {
         req.httpMethod = "POST"
         URLSession.shared.dataTask(with: req) { (d, r, e) in
             return
-        }
+        }.resume()
     }
     
     @IBAction func nexthni(_ sender: Any) {
@@ -31,7 +31,7 @@ class staffViewController: UIViewController {
         req.httpMethod = "POST"
         URLSession.shared.dataTask(with: req) { (d, r, e) in
             return
-        }
+        }.resume()
 
     }
     /*
