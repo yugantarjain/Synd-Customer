@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HNIViewController: UIViewController {
 
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        welcomeLabel.text = "Welcome, \(Auth.auth().currentUser?.displayName ?? "")"
     }
     
 

@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, John!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3t-fp-gLh">
-                                <rect key="frame" x="18" y="111" width="220" height="38.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3t-fp-gLh">
+                                <rect key="frame" x="18" y="111" width="128.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,36 +101,39 @@ In case of any issue, check in physically through the counter instead.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="XhH-pD-0xe">
-                                <rect key="frame" x="93" y="392" width="228" height="112"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="XhH-pD-0xe">
+                                <rect key="frame" x="50" y="347.5" width="314" height="201"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5S-Zs-4vN">
-                                        <rect key="frame" x="0.0" y="0.0" width="228" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Next normal customer"/>
                                         <connections>
                                             <action selector="next:" destination="E5Q-LS-Oav" eventType="touchUpInside" id="duI-28-6Ti"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9R-Bf-DYy">
-                                        <rect key="frame" x="0.0" y="71" width="228" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Next HNI"/>
-                                        <connections>
-                                            <action selector="nexthni:" destination="E5Q-LS-Oav" eventType="touchUpInside" id="Vhb-XB-3Kl"/>
-                                        </connections>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No HNI customer present right now." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwS-Xz-cdU">
+                                        <rect key="frame" x="0.0" y="141" width="314" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XhH-pD-0xe" firstAttribute="centerY" secondItem="nlF-NC-nXs" secondAttribute="centerY" id="576-HY-bcz"/>
+                            <constraint firstItem="XhH-pD-0xe" firstAttribute="leading" secondItem="B6Q-Pu-y63" secondAttribute="leading" constant="50" id="Pzd-aV-DuH"/>
+                            <constraint firstItem="B6Q-Pu-y63" firstAttribute="trailing" secondItem="XhH-pD-0xe" secondAttribute="trailing" constant="50" id="ciM-t6-dmU"/>
                             <constraint firstItem="XhH-pD-0xe" firstAttribute="centerX" secondItem="nlF-NC-nXs" secondAttribute="centerX" id="eP4-6t-BlJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B6Q-Pu-y63"/>
                     </view>
                     <navigationItem key="navigationItem" title="For Staff Use" id="Yyd-Kz-23v"/>
+                    <connections>
+                        <outlet property="hniLabel" destination="OwS-Xz-cdU" id="QDu-YB-Jah"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1v-3R-JFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -220,11 +223,11 @@ In case of any issue, check in physically through the counter instead.</string>
             </objects>
             <point key="canvasLocation" x="2500" y="-634.15178571428567"/>
         </scene>
-        <!--Check-In-->
+        <!--Customer-->
         <scene sceneID="hPu-vL-cBB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qi9-Zq-VOc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Check-In" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Customer" image="first" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zeT-8n-Aqf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -239,11 +242,11 @@ In case of any issue, check in physically through the counter instead.</string>
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
-        <!--Second-->
+        <!--Staff-->
         <scene sceneID="eNa-Mp-evK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K8x-zW-qrD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Staff" image="second" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="dme-UK-JPC">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -275,7 +278,7 @@ The bank manager has been informed of your presence at our branch, our staff wil
                                 <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPw-bF-2LW">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPw-bF-2LW">
                                 <rect key="frame" x="99.5" y="364.5" width="215.5" height="167.5"/>
                                 <string key="text">Specify service required
 
@@ -288,8 +291,8 @@ Lodge a complaint</string>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Shreya!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bod-en-1bf">
-                                <rect key="frame" x="18" y="111" width="247" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bod-en-1bf">
+                                <rect key="frame" x="18" y="111" width="129" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -308,6 +311,9 @@ Lodge a complaint</string>
                         <viewLayoutGuide key="safeArea" id="BNi-LG-9sD"/>
                     </view>
                     <navigationItem key="navigationItem" title="Waiting" id="k4c-dI-rmP"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="Bod-en-1bf" id="RVX-z2-U7z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nt5-WF-7ht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -321,8 +327,8 @@ Lodge a complaint</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, John!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9U5-1m-vLA">
-                                <rect key="frame" x="18" y="111" width="220" height="38.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9U5-1m-vLA">
+                                <rect key="frame" x="18" y="111" width="128.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -338,7 +344,7 @@ Lodge a complaint</string>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gCo-vF-NRp">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="84"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLG-Ra-zpY">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLG-Ra-zpY">
                                                 <rect key="frame" x="0.0" y="0.0" width="183" height="84"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                 <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
