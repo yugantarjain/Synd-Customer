@@ -104,8 +104,8 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                 if (email?.hasPrefix("syd"))! {
                     hniLabelText = "HNI CUSTOMER PRESENT!\n"
                     hniLabelText += (Auth.auth().currentUser?.displayName)! + "\n"
-                    hniLabelText += Auth.auth().currentUser?.phoneNumber + "\n"
-                    hniLabelText += Auth.auth().currentUser?.email
+                    hniLabelText += (Auth.auth().currentUser?.phoneNumber)! + "\n"
+                    hniLabelText += (Auth.auth().currentUser?.email)!
                     self.performSegue(withIdentifier: "toHNI", sender: self)
                 }
                 else {
