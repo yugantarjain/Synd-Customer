@@ -8,9 +8,9 @@ target 'Synd Customer' do
   # Pods for Synd Customer
 	pod 'Firebase/Auth'
 	#pod 'Firebase/Firestore'
-	pod 'Starscream'
+	#pod 'Starscream'
 	pod 'GoogleSignIn'
-    pod 'FirebaseUI/Google'
-    pod 'Socket.IO-Client-Swift', '~> 15.1.0'
+    	#pod 'FirebaseUI/Google'
+    	#pod 'Socket.IO-Client-Swift', '~> 15.1.0'
 
 end
